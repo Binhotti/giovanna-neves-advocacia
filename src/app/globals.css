@@ -1458,6 +1458,41 @@ section[id] {
   border-top: 1px solid rgba(244, 239, 230, 0.08);
 }
 
+.footer-legal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px 40px;
+  flex-wrap: wrap;
+}
+
+.credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.74rem;
+  color: rgba(244, 239, 230, 0.55);
+}
+
+.credit-logo {
+  display: block;
+  padding: 7px 14px;
+  background: var(--ivory);
+  border-radius: 10px;
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+
+.credit-logo img {
+  display: block;
+  width: 92px;
+  height: auto;
+}
+
+.credit:hover .credit-logo {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -12px rgba(201, 169, 110, 0.6);
+}
+
 .footer-legal p {
   max-width: 820px;
   font-size: 0.76rem;

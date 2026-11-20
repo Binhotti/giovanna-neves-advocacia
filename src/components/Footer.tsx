@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { areas, site } from "@/lib/site";
 
 export default function Footer() {
@@ -60,6 +61,19 @@ export default function Footer() {
           site tem caráter meramente informativo e não constitui promessa de resultado nem
           substitui consulta jurídica individualizada.
         </p>
+
+        <a
+          className="credit"
+          href="https://www.instagram.com/vbgagency/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Desenvolvido por VBG Agency (abre o Instagram)"
+        >
+          <span className="credit-label">Desenvolvido por</span>
+          <span className="credit-logo">
+            <Image src="/images/vbg-agency.png" alt="VBG Agency" width={700} height={257} />
+          </span>
+        </a>
       </div>
     </footer>
   );

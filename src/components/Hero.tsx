@@ -1,7 +1,7 @@
 import ParallaxImage from "./ParallaxImage";
 import Reveal from "./Reveal";
 import SplitText from "./SplitText";
-import { featuredAreas, scheduleMessage, whatsappLink, defaultMessage } from "@/lib/site";
+import { featuredAreas, scheduleMessage, whatsappLink } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -36,14 +36,6 @@ export default function Hero() {
               rel="noopener noreferrer"
             >
               Agendar atendimento <span aria-hidden="true">→</span>
-            </a>
-            <a
-              className="btn btn-ghost btn-lg"
-              href={whatsappLink(defaultMessage)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Falar pelo WhatsApp
             </a>
           </Reveal>
 
