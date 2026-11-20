@@ -64,7 +64,7 @@ export default function Hero() {
           </div>
           <div className="hero-caption">
             <span className="eyebrow-line" />
-            Dra. Giovanna Neves · Advogada
+            Giovanna Neves · Advogada
           </div>
         </Reveal>
       </div>

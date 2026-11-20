@@ -24,7 +24,7 @@ export default function About() {
             <span className="eyebrow-line" />
             Sobre mim
           </Reveal>
-          <SplitText as="h2" className="section-title" by="word" text="Dra. {Giovanna Neves}" />
+          <SplitText as="h2" className="section-title" by="word" text="{Giovanna Neves}" />
           {site.oab ? (
             <Reveal delay={0.15}>
               <p className="oab">{site.oab}</p>

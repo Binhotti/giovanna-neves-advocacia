@@ -15,7 +15,7 @@ export const site = {
   /** Usuário do Instagram, sem @. Deixe "" para ocultar. */
   instagram: "",
   /** E-mail profissional. Deixe "" para ocultar. */
-  email: "",
+  email: "giovanna67506@oab-sc.org.br",
   /** Cidade/UF do escritório. Deixe "" para ocultar. */
   city: "",
   url: "https://giovannanevesadv.com.br",
