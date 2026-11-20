@@ -1458,12 +1458,13 @@ section[id] {
   border-top: 1px solid rgba(244, 239, 230, 0.08);
 }
 
+/* crédito alinhado à esquerda: o botão flutuante do WhatsApp fica à direita
+   e nunca cobre a logo */
 .footer-legal {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px 40px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
 }
 
 .credit {
