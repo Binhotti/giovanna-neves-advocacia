@@ -18,11 +18,11 @@ const sans = Inter({
 });
 
 const description =
-  "Advocacia especializada em Direito Civil e Processo Civil, Direito do Consumidor, Direito Bancário e Direito de Família. Atendimento confidencial e análise individualizada do seu caso.";
+  "Cada caso possui uma história única e merece uma estratégia jurídica construída de forma individualizada. Advocacia em Direito do Consumidor, Bancário, de Família, Educação e Ações Indenizatórias, com atendimento em todo o Brasil.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: `${site.name} | Advocacia — Civil, Consumidor, Bancário e Família`,
+  title: `${site.name} | Advocacia Cível Especializada`,
   description,
   openGraph: {
     title: `${site.name} | Advocacia`,

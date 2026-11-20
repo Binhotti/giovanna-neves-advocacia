@@ -12,6 +12,7 @@ export default function Footer() {
           </p>
           {site.oab ? <p className="footer-muted">{site.oab}</p> : null}
           {site.city ? <p className="footer-muted">{site.city}</p> : null}
+          <p className="footer-muted">Atendimento presencial e digital em todo o Brasil</p>
         </div>
 
         <div>

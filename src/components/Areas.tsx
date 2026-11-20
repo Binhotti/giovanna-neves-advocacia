@@ -15,7 +15,7 @@ function trackPointer(e: MouseEvent<HTMLElement>) {
 
 /**
  * Áreas de atuação.
- * - Desktop/tablet: grade 2×2.
+ * - Desktop/tablet: grade de cartões só com o título; o texto aparece ao passar o mouse.
  * - Celular: carrossel horizontal com snap, cartão ativo em destaque,
  *   contador, barra de progresso e setas (controlado pelo CSS + este componente).
  */
@@ -91,7 +91,7 @@ export default function Areas() {
             as="h2"
             className="section-title"
             by="word"
-            text="Quatro áreas. {Um só compromisso:}|Defender o que é seu."
+            text="Cinco áreas. {Um só compromisso:}|Defender o que é seu."
           />
           <Reveal delay={0.2}>
             <p className="lead lead-dark">
@@ -117,27 +117,28 @@ export default function Areas() {
                 aria-roledescription="slide"
                 aria-label={`${i + 1} de ${areas.length}`}
               >
-                <article className="area-card spotlight" onMouseMove={trackPointer}>
+                <article className="area-card spotlight" tabIndex={0} onMouseMove={trackPointer}>
                   <span className="area-number" aria-hidden="true">
                     {a.number}
                   </span>
-                  <h3 className="area-title">{a.title}</h3>
-                  <p className="area-desc">{a.description}</p>
-                  <ul className="area-list">
-                    {a.situations.map((s) => (
-                      <li key={s}>{s}</li>
-                    ))}
-                  </ul>
-                  <a
-                    className="link-arrow"
-                    href={whatsappLink(
-                      `Olá, Dra. Giovanna! Gostaria de conversar sobre uma questão de ${a.title}.`,
-                    )}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Falar sobre este tema <span aria-hidden="true">→</span>
-                  </a>
+                  <div className="area-body">
+                    <h3 className="area-title">{a.title}</h3>
+                    <div className="area-reveal">
+                      <div className="area-reveal-inner">
+                        <p className="area-desc">{a.description}</p>
+                        <a
+                          className="link-arrow"
+                          href={whatsappLink(
+                            `Olá, Dra. Giovanna! Gostaria de conversar sobre uma questão de ${a.title}.`,
+                          )}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Falar sobre este tema <span aria-hidden="true">→</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </article>
               </div>
             ))}

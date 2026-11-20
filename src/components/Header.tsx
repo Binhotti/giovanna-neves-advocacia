@@ -5,7 +5,7 @@ import { site, whatsappLink, defaultMessage } from "@/lib/site";
 
 const links = [
   { href: "#areas", label: "Áreas de atuação" },
-  { href: "#diagnostico", label: "Diagnóstico" },
+  { href: "#ajuda", label: "Como ajudar" },
   { href: "#sobre", label: "Sobre" },
   { href: "#duvidas", label: "Dúvidas" },
 ];
@@ -36,6 +36,7 @@ export default function Header() {
           <span className="brand-text">
             <span className="brand-name">{site.name.toUpperCase()}</span>
             <span className="brand-sub">{site.title}</span>
+            {site.oab ? <span className="brand-oab">{site.oab}</span> : null}
           </span>
         </a>
 

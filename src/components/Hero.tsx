@@ -1,13 +1,7 @@
 import ParallaxImage from "./ParallaxImage";
 import Reveal from "./Reveal";
 import SplitText from "./SplitText";
-import { whatsappLink, defaultMessage } from "@/lib/site";
-
-const checks = [
-  "Atendimento confidencial",
-  "Análise individualizada do caso",
-  "Resposta direta no WhatsApp",
-];
+import { featuredAreas, scheduleMessage, whatsappLink, defaultMessage } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -17,7 +11,7 @@ export default function Hero() {
         <div className="hero-copy">
           <Reveal delay={0.1} className="eyebrow">
             <span className="eyebrow-line" />
-            Advocacia · Civil · Consumidor · Bancário · Família
+            Advocacia Cível Especializada
           </Reveal>
 
           <SplitText
@@ -29,26 +23,34 @@ export default function Hero() {
 
           <Reveal delay={0.9}>
             <p className="lead">
-              Atuação especializada em Direito Civil, do Consumidor, Bancário e de Família.
-              Entenda se o seu caso tem fundamento jurídico em uma análise individualizada,
-              com discrição e linguagem simples.
+              Defesa dos seus direitos com atendimento personalizado, estratégia jurídica
+              e acompanhamento próximo em todas as etapas do processo.
             </p>
           </Reveal>
 
-          <Reveal delay={1.05}>
+          <Reveal delay={1.05} className="hero-actions">
             <a
               className="btn btn-gold btn-lg"
+              href={whatsappLink(scheduleMessage)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agendar atendimento <span aria-hidden="true">→</span>
+            </a>
+            <a
+              className="btn btn-ghost btn-lg"
               href={whatsappLink(defaultMessage)}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Analisar meu caso <span aria-hidden="true">→</span>
+              Falar pelo WhatsApp
             </a>
           </Reveal>
 
           <Reveal delay={1.2} className="hero-checks-wrap">
+            <p className="hero-checks-label">Áreas em destaque</p>
             <ul className="hero-checks">
-              {checks.map((c) => (
+              {featuredAreas.map((c) => (
                 <li key={c}>
                   <span className="check" aria-hidden="true">✓</span>
                   {c}
