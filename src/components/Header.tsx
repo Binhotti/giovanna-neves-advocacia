@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { site, whatsappLink, defaultMessage } from "@/lib/site";
 
@@ -32,7 +33,7 @@ export default function Header() {
     <header className={`header ${scrolled ? "is-scrolled" : ""} ${open ? "is-open" : ""}`}>
       <div className="header-inner">
         <a href="#topo" className="brand" aria-label={`${site.name} — ${site.title}`} onClick={() => setOpen(false)}>
-          <span className="brand-mark" aria-hidden="true">GN</span>
+          <Image className="brand-logo" src="/images/logo-gn.png" alt="" width={560} height={267} priority />
           <span className="brand-text">
             <span className="brand-name">{site.name.toUpperCase()}</span>
             <span className="brand-sub">{site.title}</span>
